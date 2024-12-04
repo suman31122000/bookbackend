@@ -29,4 +29,16 @@ const deletecomment=async(req,res)=>{
         res.status(500).json({ message: "Internal Server Error" });
     }
 }
-export { addcomment,deletecomment};
+
+const getcomment=async(req,res)=>{
+    try {
+        const data=await comment.find();
+        if(data.length===0){
+            return res.status(400).json({ message: "comment not found" });
+        }
+        res.status(200).json({ message: "comment fetched successfully",data:data });
+    } catch (error) {
+        return res.status(500).json({ message: "Internal Server Error" });
+    }
+}
+export { addcomment,deletecomment,getcomment};
