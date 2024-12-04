@@ -7,16 +7,15 @@ const app = express();
 app.use(express.json()); 
 app.use(cookieParser());
 const options = {
-  origin:'https://bookstoreproject1.netlify.app/'|| 'http://localhost:3000',
+  origin: 'https://bookstoreproject1.netlify.app/',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
-  preflightContinue: false,
+  preflightContinue: false, 
 };
 app.use(cors(options));
+
 dotenv.config();
-// app.get('/', (req, res) => {
-//   res.send('Hello World!')
-// })
+
 app.get('/', (req, res) => {
   res.send('Hello bookbackend!')
 })
