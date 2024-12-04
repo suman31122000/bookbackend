@@ -17,7 +17,9 @@ dotenv.config();
 // app.get('/', (req, res) => {
 //   res.send('Hello World!')
 // })
-
+app.get('/', (req, res) => {
+  res.send('Hello bookbackend!')
+})
 app.use('/api/v1',router);
 app.post('/api/v1/addbook',(req,res)=>{
   console.log(req.body);
