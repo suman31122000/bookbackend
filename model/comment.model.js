@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
+import { type } from "os";
 const Comment=mongoose.Schema({
   user:{
-    type:mongoose.Schema.ObjectId,
-    ref:"users",
+    type:String,
     required:true,
   },
   bookname:{

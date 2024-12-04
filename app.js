@@ -8,6 +8,7 @@ app.use(express.json());
 app.use(cookieParser());
 const options = {
   origin: 'https://bookstoreproject1.netlify.app',
+  // origin: 'http://localhost:5173',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   preflightContinue: false, 
